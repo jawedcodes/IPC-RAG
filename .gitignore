@@ -1,0 +1,8 @@
+ipc_clean_sections.jsonl
+.venv
+__pycache__
+main.py
+main.ipynb
+.env
+repealedfileopen.pdf
+json/

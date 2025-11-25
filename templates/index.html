@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IPC RAG System</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f4f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .input-box {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+        background: #005eff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #0043c8;
+    }
+
+    .output-box {
+        margin-top: 30px;
+        padding: 20px;
+        background: #fafbfd;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+        border-left: 5px solid #005eff;
+        padding-left: 10px;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>IPC RAG AI Assistant</h1>
+
+   <form method="POST">
+    <input
+        name="query"
+        class="input-box"
+        type="text"
+        placeholder="Ask your question about IPC..."
+        value="{{ query }}"
+    />
+    <button type="submit">Search</button>
+</form>
+
+{% if answer %}
+<div id="output" class="output-box">
+    <div class="section-title">Final Answer</div>
+    <div id="answer">{{ answer|safe }}</div>
+</div>
+{% endif %}
+
+
+</div>
+
+</body>
+</html>
