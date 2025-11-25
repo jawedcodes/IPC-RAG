@@ -1,3 +1,4 @@
 # config.py
 
-SQLALCHEMY_DATABASE_URI = "postgresql://postgres:Admin@localhost:5432/ipc_rag"
+SQLALCHEMY_DATABASE_URI = "sqlite:///ipc_rag.db"
+"
